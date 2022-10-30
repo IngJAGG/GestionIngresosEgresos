@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="nuevoempleado.css"/>
+	<script id="applicationScript" type="text/javascript" src="nuevoempleado.js"></script>
+	<title>Nuevo Empleado</title>
+</head>
+<body>
+<div id="nuevoempleado">
+	<div id="Grupo_1">
+		<svg class="Rectngulo_1">
+			<rect id="Rectngulo_1" rx="39" ry="39" x="0" y="0" width="1274" height="647">
+			</rect>
+		</svg>
+		<svg class="Rectngulo_2">
+			<rect id="Rectngulo_2" rx="33" ry="33" x="0" y="0" width="277" height="647">
+			</rect>
+		</svg>
+		<a href="/inicio" id="img"><img src="home.png" alt="Home"></a>
+		<div id="Empleados">
+			<a href="/Employee">
+				<svg class="Rectngulo_3">
+					<rect id="Rectngulo_3" rx="29" ry="29" x="0" y="0" width="206" height="72">
+					</rect>
+				</svg>
+				<div id="EMPLEADOS">
+					<span>EMPLEADOS</span>
+				</div>
+			</a>
+		</div>
+		<div id="Empresas">
+			<a href="/Enterprise">
+				<svg class="Rectngulo_4">
+					<rect id="Rectngulo_4" rx="29" ry="29" x="0" y="0" width="206" height="72">
+					</rect>
+				</svg>
+				<div id="EMPRESAS">
+					<span>EMPRESAS</span>
+				</div>
+			</a>
+		</div>
+		<div id="Movimientos">
+			<a href="/Movements">
+				<svg class="Rectngulo_5">
+					<rect id="Rectngulo_5" rx="29" ry="29" x="0" y="0" width="206" height="72">
+					</rect>
+				</svg>
+				<div id="MOVIMIENTOS">
+					<span>MOVIMIENTOS</span>
+				</div>
+			</a>
+		</div>
+		<div id="GestionEmpleados">
+			<svg class="Rectngulo_6">
+				<rect id="Rectngulo_6" rx="31" ry="31" x="0" y="0" width="997" height="78">
+				</rect>
+			</svg>
+			<div id="GESTIN_DE_EMPLEADOS">
+				<span>GESTIÓN DE EMPLEADOS</span>
+			</div>
+		</div>
+		<div id="NuevoRegistro">
+			<span>Nuevo Registro</span>
+		</div>
+		<div>
+			<form th:action="@{/Employee}" method="post" id="Formulario" class="Formulario">
+
+				<div id="Nombre" class="mb-3">
+					<label class="form-label">Nombre</label>
+					<input th:field="${employee.name}" type="text" class="form-control" placeholder="Nombre">
+				</div>
+				<div id="Email" class="mb-3">
+					<label class="form-label">Email</label>
+					<input th:field="${employee.email}" type="email" class="form-control" placeholder="Email">
+				</div>
+				<div id="Role" class="mb-3">
+					<label class="form-label">Rol</label>
+					<input th:field="${employee.rol}" type="text" class="form-control" placeholder="Rol">
+				</div>
+				<div id="Empresa" class="mb-3">
+					<label class="form-label">Empresa</label>
+					<input th:field="${employee.enterprise}" type="text" class="form-control" placeholder="Empresa">
+				</div>
+				<!--<div id="Profile" class="mb-3">
+					<label class="form-label">Profile</label>
+					<input  th:field="${employee.profile}" type="text" class="form-control" placeholder="Profile">
+				</div>
+				<div id="Password" class="mb-3">
+					<label class="form-label">Password</label>
+					<input th:field="${employee.password}" type="password" class="form-control" placeholder="Password">
+				</div>-->
+				<div >
+					<button type="submit">
+						<div id="BtnAgregar">
+							<svg class="Rectngulo_9">
+								<rect id="Rectngulo_9" rx="20" ry="20" x="0" y="0" width="143" height="42">
+								</rect>
+							</svg>
+							<div id="Agregar">
+								<span>Agregar</span>
+							</div>
+						</div>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
